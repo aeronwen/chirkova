@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.kp.chirkova.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label fx:id="statusLabel" text="Система управления умным домом"/>
+    
+    <Canvas fx:id="canvas" width="800" height="500"/>
+    
+    <HBox spacing="10.0" alignment="CENTER">
+        <Button text="Активировать сценарий Ночь" onAction="#onNightScenarioClick"/>
+        <Button text="Активировать сценарий День" onAction="#onDayScenarioClick"/>
+        <Button text="Сброс" onAction="#onResetClick"/>
+    </HBox>
+    
+    <Label fx:id="energyLabel" text=""/>
+</VBox>
